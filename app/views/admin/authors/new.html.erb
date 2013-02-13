@@ -1,0 +1,23 @@
+     <ul>
+<% @author.errors.full_messages.each do |msg| %>
+      <li>* <%= msg %></li>
+    <% end %>
+ </ul>
+
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for @author, :url=>{:action=>"create"} do |f| %>
+
+      <%= f.label :first_name %> 
+      <%= f.text_field :first_name %>  <br><br>
+   <%= f.label :last_name %>
+      <%= f.text_field :last_name %>  <br><br>
+
+  <%= f.submit "Create", :class=> "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>  <br><br>
+
+<%= link_to 'Back', :action => 'index' %>
+

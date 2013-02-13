@@ -1,0 +1,9 @@
+<tr>
+<td><%= link_to author.name, :action => 'show', :id => author %></td>
+<td><%= link_to 'Edit', :action => 'edit', :id => author %></td>
+<td>
+<%= button_to 'Delete', {:controller=>:authors,:action => 'destroy', :id => author},:method=>:delete
+ %>
+</td>
+</tr>
+
